@@ -8,8 +8,8 @@ export default {
 
     if (owner && !repo) {
       const location = `https://chat.uithub.com?context=${encodeURIComponent(
-        `https://dashboard.uithub.com/${owner}/dashboard.json`,
-      )}&id=README.md`;
+        `https://dashboard.uithub.com/${owner}/dashboard.md?focus=README.md`,
+      )}`;
       return new Response("Redirecting", {
         status: 302,
         headers: { location },

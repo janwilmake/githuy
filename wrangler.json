@@ -1,0 +1,11 @@
+{
+  "name": "githuy",
+  "dev": { "port": 3000 },
+  "compatibility_date": "2025-01-30",
+  "assets": { "directory": "./" },
+  "main": "main.ts",
+  "routes": [
+    { "pattern": "www.githuy.com", "custom_domain": true },
+    { "pattern": "githuy.com", "custom_domain": true }
+  ]
+}

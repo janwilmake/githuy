@@ -7,8 +7,8 @@ export default {
     }
 
     if (owner && !repo) {
-      const location = `https://chat.uithub.com?context=${encodeURIComponent(
-        `https://dashboard.uithub.com/${owner}/dashboard.md?focus=README.md`,
+      const location = `https://chat.uithub.com/${encodeURIComponent(
+        `dashboard.uithub.com/${owner}/dashboard.md?focus=README.md`,
       )}`;
       return new Response("Redirecting", {
         status: 302,
@@ -20,8 +20,8 @@ export default {
       if (!url.searchParams.get("maxTokens")) {
         url.searchParams.set("maxTokens", "25000");
       }
-      const location = `https://chat.uithub.com?context=${encodeURIComponent(
-        `https://uithub.com${url.pathname}${url.search}`,
+      const location = `https://chat.uithub.com/${encodeURIComponent(
+        `uithub.com${url.pathname}${url.search}`,
       )}`;
       return new Response("Redirecting", {
         status: 302,
